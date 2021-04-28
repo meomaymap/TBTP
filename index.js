@@ -21,7 +21,8 @@ if (typeof(Storage) !== "undefined") {
   } else {
     link = "https://nvq-auth.stackblitz.io";
   }
-  localStorage.setItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t",window.location.href);
+  //localStorage.setItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t",window.location.href);
+  localStorage["AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t"] = window.location.href;
   alert(localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t"));
   //localStorage.removeItem("mytime");
   location.replace(link);
