@@ -8,16 +8,21 @@ if (typeof(Storage) !== "undefined") {
   var e = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_e");
   var n = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_n");
   var i = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_i");
+  
+  var link;
 
   if (p){
     if (e){
-      location.replace("https://firebase-meeting-quang.stackblitz.io");
+      link = "https://firebase-meeting-quang.stackblitz.io";
     } else {
-      location.replace("https://meomaymap.github.io/BDTT_TBTP/test2.html");
+      link = "https://meomaymap.github.io/BDTT_TBTP/test2.html";
     }
   } else {
-    location.replace("https://nvq-auth.stackblitz.io");
+    link = "https://nvq-auth.stackblitz.io";
   }
+  localStorage.setItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t",window.location.href);
+  //localStorage.removeItem("mytime");
+  location.replace(link);
 } else {
   //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
   alert("Sorry, your browser does not support Web Storage...");
