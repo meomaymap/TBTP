@@ -25,7 +25,8 @@ if (typeof(Storage) !== "undefined") {
   //localStorage["AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t"] = window.location.href;
   alert(localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t"));
   //localStorage.removeItem("mytime");
-  location.replace(link);
+  //location.replace(link);
+  window.location.href = link;
 } else {
   //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
   alert("Sorry, your browser does not support Web Storage...");
