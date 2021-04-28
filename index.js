@@ -12,9 +12,11 @@ if (typeof(Storage) !== "undefined") {
   if (p){
     location.replace("https://nvq-auth.stackblitz.io");
   } else {
+    alert(p);
     if (e){
       location.replace("https://meomaymap.github.io/BDTT_TBTP/test2.html");
     } else {
+      alert(e);
       location.replace("https://firebase-meeting-quang.stackblitz.io");
     }
   }
