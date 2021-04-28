@@ -5,10 +5,10 @@ if (typeof(Storage) !== "undefined") {
   // Retrieve
   //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
   
-  var p = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI._p");
-  var e = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI._e");
-  var n = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI._n");
-  var i = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI._i");
+  var p = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_p");
+  var e = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_e");
+  var n = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_n");
+  var i = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_i");
 
   if (p){
     location.replace("https://nvq-auth.stackblitz.io");
