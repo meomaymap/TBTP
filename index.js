@@ -17,6 +17,7 @@ if (typeof(Storage) !== "undefined") {
       location.replace("https://meomaymap.github.io/BDTT_TBTP/test2.html");
     } else {
       alert(e);
+      alert(2);
       location.replace("https://firebase-meeting-quang.stackblitz.io");
     }
   }
