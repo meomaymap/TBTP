@@ -1,3 +1,4 @@
+function gotosite(){
 if (typeof(Storage) !== "undefined") {
   // Store
   //localStorage.setItem("lastname", "Smith");
@@ -27,4 +28,5 @@ if (typeof(Storage) !== "undefined") {
 } else {
   //document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
   alert("Sorry, your browser does not support Web Storage...");
+}
 }
