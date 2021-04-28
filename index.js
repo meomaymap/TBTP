@@ -4,7 +4,7 @@ if (typeof(Storage) !== "undefined") {
   //localStorage.setItem("lastname", "Smith");
   // Retrieve
   //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-  
+  alert(localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_t"));
   var p = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_p");
   var m = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_m");
   var n = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_n");
