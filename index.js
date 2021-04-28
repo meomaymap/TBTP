@@ -10,7 +10,7 @@ if (typeof(Storage) !== "undefined") {
   var i = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_i");
   
   var link;
-
+  alert(p);
   if (p){
     if (m){
       link = "https://firebase-meeting-quang.stackblitz.io";
