@@ -5,14 +5,14 @@ if (typeof(Storage) !== "undefined") {
   //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
   
   var p = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_p");
-  var e = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_e");
+  var m = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_m");
   var n = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_n");
   var i = localStorage.getItem("AIzaSyC7om8zq3wvGcrhu5PyZlZoi2QrNmkmPJI_i");
   
   var link;
 
   if (p){
-    if (e){
+    if (m){
       link = "https://firebase-meeting-quang.stackblitz.io";
     } else {
       link = "https://meomaymap.github.io/BDTT_TBTP/test2.html";
