@@ -1,3 +1,4 @@
+alert(3);
 function gotosite(){
 if (typeof(Storage) !== "undefined") {
   // Store
