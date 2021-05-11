@@ -61,7 +61,7 @@ document.addEventListener("touchstart", function(e){
 		str= ""
 	}
 	str = "?action=" + 15;
- 	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbyftdDK7doLsLkNkD-H9WdTJey-Q9wVgjo4pnIlpPWgfhkZ07M/exec" + str;
+ 	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbyftdDK7doLsLkNkD-H9WdTJey-Q9wVgjo4pnIlpPWgfhkZ07M/exec?action=15";
 	
 		setTimeout(function(){
             // Hide the address bar!
