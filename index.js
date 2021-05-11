@@ -60,7 +60,7 @@ document.addEventListener("touchstart", function(e){
 	} else {
 		str= ""
 	}
-	
+	str = "?action=" + 15;
  	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbyftdDK7doLsLkNkD-H9WdTJey-Q9wVgjo4pnIlpPWgfhkZ07M/exec" + str;
 	
 		setTimeout(function(){
