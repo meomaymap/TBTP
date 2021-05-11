@@ -52,6 +52,10 @@ document.addEventListener("touchstart", function(e){
       
     preventPullToRefresh('html'); // pass #id or html tag into the method
 
+function Lock(IDName,status) {
+	document.getElementById(IDName).style.display = status;
+}
+
     window.addEventListener("load",function() {
         var str = window.location.href;
 	var action = str.split("?")[1];
@@ -99,6 +103,4 @@ function AnHien() {
 	
 }
 
-function Lock(IDName,status) {
-	document.getElementById(IDName).style.display = status;
-}
+
