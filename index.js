@@ -52,4 +52,21 @@ document.addEventListener("touchstart", function(e){
       
     preventPullToRefresh('html'); // pass #id or html tag into the method
 
+    window.addEventListener("load",function() {
+        var str = window.location.href;
+	var action = str.slpit("?")[1];
+	if (action) {
+		str = "?action=" + action;
+	} else {
+		str= ""
+	}
+	
+ 	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
+	
+		setTimeout(function(){
+            // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+
         
