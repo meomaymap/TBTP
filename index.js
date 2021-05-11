@@ -1,1 +1,69 @@
-var _0x3abf=["\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x6B\x65\x79\x64\x6F\x77\x6E","\x63\x74\x72\x6C\x4B\x65\x79","\x6B\x65\x79\x43\x6F\x64\x65","\x73\x74\x6F\x70\x50\x72\x6F\x70\x61\x67\x61\x74\x69\x6F\x6E","\x74\x6F\x75\x63\x68\x73\x74\x61\x72\x74","\x6C\x65\x6E\x67\x74\x68","\x74\x6F\x75\x63\x68\x65\x73","\x70\x61\x67\x65\x59\x4F\x66\x66\x73\x65\x74","\x73\x63\x72\x6F\x6C\x6C\x54\x6F\x70","\x62\x6F\x64\x79","\x64\x6F\x63\x75\x6D\x65\x6E\x74\x45\x6C\x65\x6D\x65\x6E\x74","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x74\x6F\x75\x63\x68\x6D\x6F\x76\x65","\x68\x74\x6D\x6C","\x6C\x6F\x61\x64","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x3F","\x73\x70\x6C\x69\x74","\x3F\x61\x63\x74\x69\x6F\x6E\x3D","","\x73\x72\x63","\x6D\x79\x46\x72\x61\x6D\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x73\x63\x72\x69\x70\x74\x2E\x67\x6F\x6F\x67\x6C\x65\x2E\x63\x6F\x6D\x2F\x6D\x61\x63\x72\x6F\x73\x2F\x73\x2F\x41\x4B\x66\x79\x63\x62\x79\x37\x78\x4F\x61\x6A\x6C\x77\x66\x79\x72\x6C\x44\x70\x30\x76\x52\x2D\x33\x6D\x78\x58\x43\x35\x4F\x39\x35\x73\x35\x75\x50\x62\x68\x33\x63\x7A\x38\x43\x2F\x65\x78\x65\x63","\x73\x63\x72\x6F\x6C\x6C\x54\x6F"];document[_0x3abf[2]](_0x3abf[0],function(_0x34d9x1){_0x34d9x1[_0x3abf[1]]()},false);document[_0x3abf[2]](_0x3abf[3],function(_0x34d9x1){if(_0x34d9x1[_0x3abf[4]]|| _0x34d9x1[_0x3abf[5]]== 123){_0x34d9x1[_0x3abf[6]]();_0x34d9x1[_0x3abf[1]]()}});function preventPullToRefresh(_0x34d9x3){var _0x34d9x4=false;document[_0x3abf[14]](_0x34d9x3)[_0x3abf[2]](_0x3abf[7],function(_0x34d9x1){if(_0x34d9x1[_0x3abf[9]][_0x3abf[8]]!== 1){return};var _0x34d9x5=window[_0x3abf[10]]|| document[_0x3abf[12]][_0x3abf[11]]|| document[_0x3abf[13]][_0x3abf[11]];_0x34d9x4= (_0x34d9x5=== 0)});document[_0x3abf[14]](_0x34d9x3)[_0x3abf[2]](_0x3abf[15],function(_0x34d9x1){if(_0x34d9x4){_0x34d9x4= false;_0x34d9x1[_0x3abf[1]]()}})}document[_0x3abf[2]](_0x3abf[7],function(_0x34d9x1){if(_0x34d9x1[_0x3abf[9]][_0x3abf[8]]> 1){_0x34d9x1[_0x3abf[1]]()}},{passive:false});preventPullToRefresh(_0x3abf[16]);window[_0x3abf[2]](_0x3abf[17],function(){var _0x34d9x6=window[_0x3abf[19]][_0x3abf[18]];var _0x34d9x7=_0x34d9x6[_0x3abf[21]](_0x3abf[20])[1];if(_0x34d9x7){_0x34d9x6= _0x3abf[22]+ _0x34d9x7}else {_0x34d9x6= _0x3abf[23]};document[_0x3abf[26]](_0x3abf[25])[_0x3abf[24]]= _0x3abf[27]+ _0x34d9x6;setTimeout(function(){window[_0x3abf[28]](0,1)},0)})
+ //Disable get code
+        //DISABLE RIGHT-CLICK
+        document.addEventListener("contextmenu", function(e){
+            e.preventDefault();
+        }, false);
+
+        //DISABLE “VIEW SOURCE” SHORTCUT KEY
+        document.addEventListener("keydown", function(e){
+        // USE THIS TO DISABLE CONTROL AND ALL FUNCTION KEYS
+        // if (e.ctrlKey || (e.keyCode>=112 && e.keyCode<=123)) {
+        // THIS WILL ONLY DISABLE CONTROL AND F12
+            if (e.ctrlKey || e.keyCode==123) {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        });
+
+function preventPullToRefresh(element) {
+	var prevent = false;
+	document.querySelector(element).addEventListener('touchstart', function(e){
+	if (e.touches.length !== 1) { 
+		return; 
+	}
+
+                
+
+                var scrollY = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
+                prevent = (scrollY === 0);
+		    });
+
+			document.querySelector(element).addEventListener('touchmove', function(e){
+
+                if (prevent) {
+                   
+                    prevent = false;
+                    e.preventDefault();
+                }
+			});
+		  }
+
+        
+        //Disable get code
+
+document.addEventListener("touchstart", function(e){
+
+        if(e.touches.length > 1){
+                //the event is multi-touch
+                //you can then prevent the behavior
+                e.preventDefault();
+        } 
+    },{passive: false});
+      
+    preventPullToRefresh('html'); // pass #id or html tag into the method
+
+    window.addEventListener("load",function() {
+        var str = window.location.href;
+	var action = str.split("?")[1];
+	if (action){
+	   str = "?action=" + action;
+	} else {
+	   str = "";
+	}	
+ 	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
+	
+		setTimeout(function(){
+            // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
