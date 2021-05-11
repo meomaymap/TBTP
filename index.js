@@ -74,9 +74,11 @@ function DeterminDevice() {
                  Dev = "Mobile";
               }
            }
+	
+	alert(Dev);
         }
 
-alert(Dev);
+
 
 var wi = window.innerWidth;
 var hi = window.innerHeight;
