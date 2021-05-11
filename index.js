@@ -75,11 +75,9 @@ var hi = window.innerHeight;
 	Lock("KhoaManhinh","block");
 		hi = window.innerWidth;
 		wi = window.innerHeight;
-		alert("ngang");
 	} else {
 	Lock("myOverlay","block");
 	Lock("KhoaManhinh","none");
-		alert("doc");
 	}
 	
 	    
