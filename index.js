@@ -54,13 +54,8 @@ document.addEventListener("touchstart", function(e){
 
     window.addEventListener("load",function() {
         var str = window.location.href;
-	var action = str.slpit("?")[1];
-	if (action) {
-		str = "?action=" + action;
-	} else {
-		str= ""
-	}
-	str = "?action=" + 15;
+	//var action = str.slpit("?")[1];
+
  	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycbyftdDK7doLsLkNkD-H9WdTJey-Q9wVgjo4pnIlpPWgfhkZ07M/exec?action=15";
 	
 		setTimeout(function(){
