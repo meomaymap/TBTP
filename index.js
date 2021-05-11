@@ -87,33 +87,13 @@ var hi = window.innerHeight;
 	} else {
 	   str = "";
 	}	
- 	
-	var Dev;
-	var Typedevice = DetectMobile();
-           var n = Typedevice.indexOf("Nope");
-           
-           if(n>0){
-              Dev = "Laptop";
-           } else {
-              n = Typedevice.indexOf("Not Mobile");
-              if(n>0) {
-                 Dev = "Tablet";
-              } else {
-                 Dev = "Mobile";
-              }
-           }
-	
+ 		
 	    
 	if(window.innerWidth>window.innerHeight) {
-		if (Dev != "Laptop") {
+
 			Lock("myOverlay","none");
 			Lock("KhoaManhinh","block");
-			hi = window.innerWidth;
-			wi = window.innerHeight;
-		} else {
-			Lock("myOverlay","block");
-			Lock("KhoaManhinh","none");
-		}
+
 	} else {
 	Lock("myOverlay","block");
 	Lock("KhoaManhinh","none");
