@@ -58,6 +58,7 @@ function Lock(IDName,status) {
 
 
 var Dev;
+DeterminDevice();
 
 function DeterminDevice(){
            var Typedevice = DetectMobile();
@@ -87,7 +88,7 @@ var hi = window.innerHeight;
 	   str = "";
 	}	
  	
-	DeterminDevice();
+	
 	    
 	if(window.innerWidth>window.innerHeight) {
 		if (Dev != "Laptop") {
