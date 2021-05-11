@@ -61,9 +61,42 @@ document.addEventListener("touchstart", function(e){
 	   str = "";
 	}	
  	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
+	    
+	AnHien();
 	
 		setTimeout(function(){
             // Hide the address bar!
                 window.scrollTo(0, 1);
             }, 0);
         });
+
+var wi = window.innerWidth;
+var hi = window.innerHeight;
+window.addEventListener("resize", AnHien);
+
+
+
+function AnHien() {
+	var wDiv =  document.getElementById("myOverlay").offsetHeight;
+	if (wi>hi) {
+	Lock("myOverlay","none");
+	Lock("KhoaManhinh","block");
+		hi = window.innerWidth;
+		wi = window.innerHeight;
+		break;
+	}
+	if (wDiv<=wi){
+		Lock("myOverlay","block");
+		Lock("KhoaManhinh","none");
+	} else {
+		Lock("myOverlay","none");
+		Lock("KhoaManhinh","block");
+	}
+	
+	
+	
+}
+
+function Lock(IDName,status) {
+	document.getElementById(IDName).style.display = status;
+}
