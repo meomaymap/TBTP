@@ -57,8 +57,8 @@ function Lock(IDName,status) {
 }
 
 
-//var Dev;
-//DeterminDevice();
+var Dev;
+DeterminDevice();
 
 function DeterminDevice(){
            var Typedevice = DetectMobile();
@@ -99,6 +99,7 @@ var hi = window.innerHeight;
 	Lock("KhoaManhinh","none");
 	}
 	
+	    alert(Dev);
 	    
 	    document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
 	    
