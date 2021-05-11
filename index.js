@@ -57,7 +57,23 @@ function Lock(IDName,status) {
 }
 
 
-
+function DeterminDevice(){
+           var Typedevice = DetectMobile();
+           var n = Typedevice.indexOf("Nope");
+           var Dev;
+           if(n>0){
+              Dev = "Laptop";
+           } else {
+              n = Typedevice.indexOf("Not Mobile");
+              if(n>0) {
+                 Dev = "Tablet";
+              } else {
+                 Dev = "Mobile";
+              }
+           }
+	
+	return Dev;
+        }
 
 
 
@@ -78,13 +94,14 @@ var hi = window.innerHeight;
 
 			Lock("myOverlay","none");
 			Lock("KhoaManhinh","block");
+		
 
 	} else {
 	Lock("myOverlay","block");
 	Lock("KhoaManhinh","none");
 	}
 	
-	    
+	    alert(DeterminDevice());
 	    
 	    document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
 	    
