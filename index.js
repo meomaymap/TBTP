@@ -62,7 +62,16 @@ document.addEventListener("touchstart", function(e){
 	}	
  	document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
 	    
-	if(window.innerWidth>window.innerHeight) {
+	
+	
+		setTimeout(function(){
+            // Hide the address bar!
+                window.scrollTo(0, 1);
+            }, 0);
+        });
+
+
+if(window.innerWidth>window.innerHeight) {
 		Lock("myOverlay","none");
 	Lock("KhoaManhinh","block");
 		//hi = window.innerWidth;
@@ -73,12 +82,6 @@ document.addEventListener("touchstart", function(e){
 	Lock("KhoaManhinh","none");
 		alert("doc");
 	}
-	
-		setTimeout(function(){
-            // Hide the address bar!
-                window.scrollTo(0, 1);
-            }, 0);
-        });
 
 var wi = window.innerWidth;
 var hi = window.innerHeight;
