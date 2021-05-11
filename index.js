@@ -67,6 +67,9 @@ document.addEventListener("touchstart", function(e){
 	Lock("KhoaManhinh","block");
 		//hi = window.innerWidth;
 		//wi = window.innerHeight;
+	} else {
+	Lock("myOverlay","block");
+	Lock("KhoaManhinh","none");
 	}
 	
 		setTimeout(function(){
