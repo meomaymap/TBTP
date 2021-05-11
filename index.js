@@ -56,6 +56,10 @@ function Lock(IDName,status) {
 	document.getElementById(IDName).style.display = status;
 }
 
+
+var wi = window.innerWidth;
+var hi = window.innerHeight;
+
     window.addEventListener("load",function() {
         var str = window.location.href;
 	var action = str.split("?")[1];
@@ -69,8 +73,8 @@ function Lock(IDName,status) {
 	if(window.innerWidth>window.innerHeight) {
 		Lock("myOverlay","none");
 	Lock("KhoaManhinh","block");
-		//hi = window.innerWidth;
-		//wi = window.innerHeight;
+		hi = window.innerWidth;
+		wi = window.innerHeight;
 		alert("ngang");
 	} else {
 	Lock("myOverlay","block");
@@ -90,17 +94,21 @@ function Lock(IDName,status) {
 
 
 
-var wi = window.innerWidth;
-var hi = window.innerHeight;
+
 window.addEventListener("resize", AnHien);
 
 
 
 function AnHien() {
-	alert(5);
+	var wDiv = document.getElementById("myOverlay").offsetWidth; 
 	
-	
-	
+	if (wDiv > wi){
+		Lock("myOverlay","none");
+		Lock("KhoaManhinh","block");
+	} else {
+		Lock("myOverlay","block");
+		Lock("KhoaManhinh","none");
+	}
 }
 
 
