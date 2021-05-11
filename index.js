@@ -87,6 +87,7 @@ var hi = window.innerHeight;
 	   str = "";
 	}	
  	
+	DeterminDevice();
 	    
 	if(window.innerWidth>window.innerHeight) {
 		if (Dev != "Laptop") {
