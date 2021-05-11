@@ -87,15 +87,7 @@ window.addEventListener("resize", AnHien);
 
 
 function AnHien() {
-	var wDiv =  document.getElementById("myOverlay").offsetHeight;
-	alert(wDiv + " va " + wi);
-	if (wDiv<=wi){
-		Lock("myOverlay","block");
-		Lock("KhoaManhinh","none");
-	} else {
-		Lock("myOverlay","none");
-		Lock("KhoaManhinh","block");
-	}
+	alert(5);
 	
 	
 	
