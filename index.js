@@ -60,7 +60,7 @@ function Lock(IDName,status) {
 var Dev;
 DeterminDevice();
 
-function DeterminDevice(){
+function DeterminDevice() {
            var Typedevice = DetectMobile();
            var n = Typedevice.indexOf("Nope");
            
