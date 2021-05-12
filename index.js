@@ -56,23 +56,6 @@ function Lock(IDName,status) {
 	document.getElementById(IDName).style.display = status;
 }
 
-function DeterminDevice(){
-           var Typedevice = DetectMobile();
-           var n = Typedevice.indexOf("Nope");
-           var thietbi;
-           if(n>0){
-              thietbi = "Laptop";
-           } else {
-              n = Typedevice.indexOf("Not Mobile");
-              if(n>0) {
-                 thietbi = "Tablet";
-              } else {
-                 thietbi = "Mobile";
-              }
-           }
-	return thietbi;
-        }
-
 
 
 var wi = window.innerWidth;
@@ -86,27 +69,6 @@ var hi = window.innerHeight;
 	} else {
 	   str = "";
 	}	
- 	alert("Q");
-	
-	var Typedevice = DetectMobile();
-           var n = Typedevice.indexOf("Nope");
-           var thietbi;    
-	    
-	    alert(n);
-	    
-	if(window.innerWidth>window.innerHeight) {
-
-			Lock("myOverlay","none");
-		Lock("myFrame","none");
-			Lock("KhoaManhinh","block");
-			
-		
-
-	} else {
-	Lock("myOverlay","block");
-		Lock("myFrame","block");
-	Lock("KhoaManhinh","none");
-	}
 	
 	    
 	    document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
@@ -115,26 +77,5 @@ var hi = window.innerHeight;
         });
 
 
-
-
-
-window.addEventListener("resize", AnHien);
-
-
-
-function AnHien() {
-	var wDiv = document.getElementById("myOverlay").offsetWidth; 
-	
-	if (wDiv > wi){
-		Lock("myOverlay","none");
-		Lock("myFrame","none");
-		Lock("KhoaManhinh","block");
-		
-	} else {
-		Lock("myOverlay","block");
-		Lock("myFrame","block");
-		Lock("KhoaManhinh","none");
-	}
-}
 
 
