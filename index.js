@@ -88,7 +88,8 @@ var hi = window.innerHeight;
 	   str = "";
 	}	
  		
-	    
+	var x = DeterminDevice();
+	    alert(x);
 	if(window.innerWidth>window.innerHeight) {
 
 			Lock("myOverlay","none");
