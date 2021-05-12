@@ -87,8 +87,13 @@ var hi = window.innerHeight;
 	   str = "";
 	}	
  	alert("Q");
-	var x = DeterminDevice();
-	    alert(x);
+	
+	var Typedevice = DetectMobile();
+           var n = Typedevice.indexOf("Nope");
+           var thietbi;    
+	    
+	    alert(n);
+	    
 	if(window.innerWidth>window.innerHeight) {
 
 			Lock("myOverlay","none");
