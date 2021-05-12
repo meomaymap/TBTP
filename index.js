@@ -59,18 +59,18 @@ function Lock(IDName,status) {
 function DeterminDevice(){
            var Typedevice = DetectMobile();
            var n = Typedevice.indexOf("Nope");
-           var Dev;
+           var thietbi;
            if(n>0){
-              Dev = "Laptop";
+              thietbi = "Laptop";
            } else {
               n = Typedevice.indexOf("Not Mobile");
               if(n>0) {
-                 Dev = "Tablet";
+                 thietbi = "Tablet";
               } else {
-                 Dev = "Mobile";
+                 thietbi = "Mobile";
               }
            }
-	return Dev;
+	return thietbi;
         }
 
 
