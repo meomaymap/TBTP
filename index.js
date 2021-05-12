@@ -92,11 +92,14 @@ var hi = window.innerHeight;
 	if(window.innerWidth>window.innerHeight) {
 
 			Lock("myOverlay","none");
+		Lock("myFrame","none");
 			Lock("KhoaManhinh","block");
+			
 		
 
 	} else {
 	Lock("myOverlay","block");
+		Lock("myFrame","block");
 	Lock("KhoaManhinh","none");
 	}
 	
@@ -122,9 +125,12 @@ function AnHien() {
 	
 	if (wDiv > wi){
 		Lock("myOverlay","none");
+		Lock("myFrame","none");
 		Lock("KhoaManhinh","block");
+		
 	} else {
 		Lock("myOverlay","block");
+		Lock("myFrame","block");
 		Lock("KhoaManhinh","none");
 	}
 }
