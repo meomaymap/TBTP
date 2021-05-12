@@ -16,9 +16,10 @@
  }
    
         .overlay {
-            width: 100%;
-
-            height: 100%;
+            width: 100vw;
+            width: calc(var(--vw, 1vw) * 100);
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
 
 		overflow: hidden;
 		text-align: center;
