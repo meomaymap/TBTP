@@ -21,6 +21,7 @@
             height: 100%;
 
 		overflow: hidden;
+		text-align: center;
         }
 
       
@@ -34,6 +35,11 @@
             
         }
         
+div.p {
+	font-weight: bold;
+	font-size: 30px;
+	padding: 20px;
 }
+
 	
 </style>
