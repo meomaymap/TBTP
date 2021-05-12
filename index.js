@@ -86,7 +86,7 @@ var hi = window.innerHeight;
 	} else {
 	   str = "";
 	}	
- 		
+ 	alert("Q");
 	var x = DeterminDevice();
 	    alert(x);
 	if(window.innerWidth>window.innerHeight) {
