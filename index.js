@@ -56,7 +56,6 @@ function Lock(IDName,status) {
 	document.getElementById(IDName).style.display = status;
 }
 
-var Dev;
 function DeterminDevice(){
            var Typedevice = DetectMobile();
            var n = Typedevice.indexOf("Nope");
