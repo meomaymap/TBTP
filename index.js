@@ -58,10 +58,29 @@ function Lock(IDName,status) {
 
 
 
+function DeterminDevice(){
+           var Typedevice = DetectMobile();
+           var n = Typedevice.indexOf("Nope");
+           
+           if(n>0){
+              Dev = "Laptop";
+           } else {
+              n = Typedevice.indexOf("Not Mobile");
+              if(n>0) {
+                 Dev = "Tablet";
+              } else {
+                 Dev = "Mobile";
+              }
+           }
+        }
+
 var wi = window.innerWidth;
 var hi = window.innerHeight;
+var Dev;
 
     window.addEventListener("load",function() {
+	    
+	DeterminDevice();	    
         var str = window.location.href;
 	var action = str.split("?")[1];
 	if (action){
@@ -72,6 +91,7 @@ var hi = window.innerHeight;
 	
 	    
 	    document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
+	    alert(Dev);
 	    
 
         });
