@@ -57,22 +57,6 @@ function Lock(IDName,status) {
 }
 
 
-var Dev;
-function DeterminDevice(){
-           var Typedevice = DetectMobile();
-           var n = Typedevice.indexOf("Nope");
-           
-           if(n>0){
-              Dev = "Laptop";
-           } else {
-              n = Typedevice.indexOf("Not Mobile");
-              if(n>0) {
-                 Dev = "Tablet";
-              } else {
-                 Dev = "Mobile";
-              }
-           }
-        }
 
 var wi = window.innerWidth;
 var hi = window.innerHeight;
@@ -80,7 +64,6 @@ var hi = window.innerHeight;
 
     window.addEventListener("load",function() {
 	    
-	DeterminDevice();	    
         var str = window.location.href;
 	var action = str.split("?")[1];
 	if (action){
