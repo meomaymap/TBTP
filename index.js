@@ -78,6 +78,25 @@ var hi = window.innerHeight;
 
         });
 
+var eventMethod = window.addEventListener
+			? "addEventListener"
+			: "attachEvent";
+	var eventer = window[eventMethod];
+	var messageEvent = eventMethod === "attachEvent"
+		? "onmessage"
+		: "message";
 
+	eventer(messageEvent, function (e) {
+		
+		//if (e.origin !== 'https://meomaymap.github.io') return;
+		
+		//if (e.data === "myevent" || e.message === "myevent") 
+			//alert('Message from iframe just came!');
+		alert(e.origin);
+		alert(e.data);
+			//alert(e.message);
+		
+		//console.log(e);
+	});
 
 
