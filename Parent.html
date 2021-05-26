@@ -18,11 +18,11 @@
 
 	eventer(messageEvent, function (e) {
 		
-		//if (e.origin !== 'https://meomaymap.github.io/TBTP/iframe.html') return;
+		if (e.origin !== 'https://meomaymap.github.io') return;
 		
 		if (e.data === "myevent" || e.message === "myevent") 
 			alert('Message from iframe just came!');
-		        alert(e.origin);
+			alert(e.message);
 		
 		console.log(e);
 	});
