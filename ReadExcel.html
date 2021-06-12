@@ -26,10 +26,12 @@
               
               const qqq = slag.map((m) => { return Object.values(m); });
               
+              //ok
             //jQuery( '#xlx_json' ).val(qqq[0][3]);
               //jQuery( '#xlx_json' ).val(Object.keys(slag[0]));
-            jQuery( '#xlx_json' ).val(Object.keys(slag[0])[3]);
-
+            //jQuery( '#xlx_json' ).val(Object.keys(slag[0])[3]);
+              jQuery( '#xlx_json' ).val(slag[0][Object.keys(slag[0])[1]]);
+            //ok
           })
         };
 
