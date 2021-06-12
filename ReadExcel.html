@@ -22,12 +22,14 @@
              //slag = json_object.map(doc => Object.values(doc));
               //slag = json_object.values(JSON.parse(string))
               slag = JSON.parse(json_object);
+              
+              const qqq = slag.map((m) => { return Object.values(m); });
               //for (let i= 0; i < json_object.length; i += 1) {
               //  const element = json_object[i];
               //  Object.values(element).forEach((r) => { slag.push(r) });
              //}
               
-            jQuery( '#xlx_json' ).val(slag);
+            jQuery( '#xlx_json' ).val(qqq);
           })
         };
 
