@@ -26,8 +26,9 @@
               
               const qqq = slag.map((m) => { return Object.values(m); });
               
-            jQuery( '#xlx_json' ).val(qqq[0][3]);
+            //jQuery( '#xlx_json' ).val(qqq[0][3]);
              // jQuery( '#xlx_json' ).val("Quang");
+              jQuery( '#xlx_json' ).XLSX.utils.sheet_to_json(workbook.Sheets[sheetName])
           })
         };
 
