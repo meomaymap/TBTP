@@ -20,7 +20,7 @@
             //console.log(JSON.parse(json_object));
             //jQuery( '#xlx_json' ).val( json_object );
               //slag = json_object.records.map(doc => Object.values(doc));
-            jQuery( '#xlx_json' ).val(json_object[0]);
+            jQuery( '#xlx_json' ).val(JSON.parse(json_object)[0]);
           })
         };
 
