@@ -1,105 +1,52 @@
-<html>
-	<head>
-		<title>read-excel-file</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+<script>
+    var ExcelToJSON = function() {
 
-		<meta charset="utf-8">
+      this.parseExcel = function(file) {
+        var reader = new FileReader();
 
-		<script src="meomaymap.github.io/TBTP/read-excel-file.min.js"></script>
+        reader.onload = function(e) {
+          var data = e.target.result;
+          var workbook = XLSX.read(data, {
+            type: 'binary'
+          });
+          workbook.SheetNames.forEach(function(sheetName) {
+            // Here is your object
+            var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
+            var json_object = JSON.stringify(XL_row_object);
+            console.log(JSON.parse(json_object));
+            jQuery( '#xlx_json' ).val( json_object );
+          })
+        };
 
-		<style>
-			body
-			{
-				margin : 20px;
-				font-family : Arial, Helvetica;
-			}
+        reader.onerror = function(ex) {
+          console.log(ex);
+        };
 
-			#input
-			{
-				margin-top    : 20px;
-				margin-bottom : 10px;
-			}
+        reader.readAsBinaryString(file);
+      };
+  };
+
+  function handleFileSelect(evt) {
+    
+    var files = evt.target.files; // FileList object
+    var xl2json = new ExcelToJSON();
+    xl2json.parseExcel(files[0]);
+  }
 
 
-			#result-table table
-			{
-				width : 100%;
-				border-collapse : collapse;
-				margin-top    : 2.5em;
-				margin-bottom : 2.5em;
-				font-size     : 12px;
-  		}
+ 
+</script>
 
-			#result-table table td
-			{
-				border : 1px solid black;
-				padding : 0.5em;
+<form enctype="multipart/form-data">
+    <input id="upload" type=file  name="files[]">
+</form>
 
-				text-overflow : ellipsis;
-				overflow      : hidden;
-				max-width     : 10em;
-				white-space   : nowrap;
-			}
+    <textarea class="form-control" rows=35 cols=120 id="xlx_json"></textarea>
 
-			#main-link
-			{
-				display     : block;
-				font-size   : 24px;
-				color       : #0093C4;
-				font-family : monospace;
-				text-decoration : none;
-			}
-		</style>
-	</head>
+    <script>
+        document.getElementById('upload').addEventListener('change', handleFileSelect, false);
 
-	<body>
-		<!--<a id="main-link" href="https://gitlab.com/catamphetamine/read-excel-file">
-			read-excel-file
-		</a><-->
-
-		<input type="file" id="input" />
-
-		<div style="font-size: 12px">
-			* Parsing to JSON with a strict schema is supported. <a target="_blank" href="https://gitlab.com/catamphetamine/read-excel-file#json" style="color: #0093C4; text-decoration: none">Read more</a>.
-		</div>
-
-		<div id="result-table"></div>
-
-		<pre id="result"></pre>
-
-		<script>
-			var input = document.getElementById('input')
-
-			input.addEventListener('change', function() {
-			  readXlsxFile(input.files[0], { dateFormat: 'MM/DD/YY' }).then(function(data) {
-			    // `data` is an array of rows
-			    // each row being an array of cells.
-			    document.getElementById('result').innerText = JSON.stringify(data, null, 2)
-
-			    // Applying `innerHTML` hangs the browser when there're a lot of rows/columns.
-			    // For example, for a file having 2000 rows and 20 columns on a modern
-			    // mid-tier CPU it parses the file (using a "schema") for 3 seconds
-			    // (blocking) with 100% single CPU core usage.
-			    // Then applying `innerHTML` hangs the browser.
-
-			    // document.getElementById('result-table').innerHTML =
-			    // 	'<table>' +
-			    // 	'<tbody>' +
-			    // 	data.map(function (row) {
-			    // 		return '<tr>' +
-			    // 			row.map(function (cell) {
-			    // 				return '<td>' +
-				   //  				(cell === null ? '' : cell) +
-				   //  				'</td>'
-			    // 			}).join('') +
-			    // 			'</tr>'
-			    // 	}).join('') +
-			    // 	'</tbody>' +
-			    // 	'</table>'
-			  }, function (error) {
-			  	console.error(error)
-			  	alert("Error while parsing Excel file. See console output for the error stack trace.")
-			  })
-			})
-		</script>
-	</body>
-</html>
+    </script>
