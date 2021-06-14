@@ -14,6 +14,7 @@
             type: 'binary'
           });
           workbook.SheetNames.forEach(function(sheetName) {
+              alert(1);
             // Here is your object
             var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
             var json_object = JSON.stringify(XL_row_object);
@@ -28,6 +29,7 @@
               
               //ok
             jQuery( '#xlx_json' ).val(qqq[0][3]);
+              
               //jQuery( '#xlx_json' ).val(Object.keys(slag[0]));
             //jQuery( '#xlx_json' ).val(Object.keys(slag[0])[3]);
              // jQuery( '#xlx_json' ).val(slag[0][Object.keys(slag[0])[1]]);
