@@ -50,12 +50,24 @@
     xl2json.parseExcel(files[0]);
   }
 
-
+  function ExportData()
+    {
+            filename='reports.xlsx';
+       data=[{Market: "IN", New Arrivals: "6", Upcoming Appointments: "2", Pending - 1st Attempt: "4"},
+            {Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"},
+            {Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"},
+            {Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"}]
+        var ws = XLSX.utils.json_to_sheet(data);
+        var wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "People");
+        XLSX.writeFile(wb,filename);
+     }
  
 </script>
 
 <form enctype="multipart/form-data">
     <input id="upload" type=file  name="files[]">
+    <input type="button" value="Click me" onclick="ExportData()">
 </form>
 
     <textarea class="form-control" rows=35 cols=120 id="xlx_json"></textarea>
