@@ -35,7 +35,7 @@
              jQuery( '#xlx_json' ).val(slag[0][Object.keys(slag[0])[1]]);
             //ok
               
-              //ExportData();
+              ExportData1();
           })
         };
 
@@ -54,6 +54,28 @@
     xl2json.parseExcel(files[0]);
   }
 
+  function ExportData1() { 
+      var data = [
+    {"name":"John", "city": "Seattle"},
+    {"name":"Mike", "city": "Los Angeles"},
+    {"name":"Zach", "city": "New York"}
+];
+
+/* this line is only needed if you are not adding a script tag reference */
+if(typeof XLSX == 'undefined') XLSX = require('xlsx');
+
+/* make the worksheet */
+var ws = XLSX.utils.json_to_sheet(data);
+
+/* add to workbook */
+var wb = XLSX.utils.book_new();
+XLSX.utils.book_append_sheet(wb, ws, "People");
+
+/* generate an XLSX file */
+XLSX.writeFile(wb, "sheetjs.xlsx");
+      
+  }
+    
   function ExportData() {  
       alert(1);
         filename='reports.xlsx';
