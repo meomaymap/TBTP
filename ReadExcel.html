@@ -35,7 +35,7 @@
              jQuery( '#xlx_json' ).val(slag[0][Object.keys(slag[0])[1]]);
             //ok
               
-              ExportData1();
+              ExportData1(slag);
           })
         };
 
@@ -54,12 +54,12 @@
     xl2json.parseExcel(files[0]);
   }
 
-  function ExportData1() { 
-      var data = [
-    {"name":"John", "city": "Seattle"},
-    {"name":"Mike", "city": "Los Angeles"},
-    {"name":"Zach", "city": "New York"}
-];
+  function ExportData1(data) { 
+//      var data = [
+//    {"name":"John", "city": "Seattle"},
+//    {"name":"Mike", "city": "Los Angeles"},
+//    {"name":"Zach", "city": "New York"}
+//];
 
 /* this line is only needed if you are not adding a script tag reference */
 if(typeof XLSX == 'undefined') XLSX = require('xlsx');
