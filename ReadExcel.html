@@ -27,14 +27,14 @@
               const qqq = slag.map((m) => { return Object.values(m); });
               
               //ok
-            jQuery( '#xlx_json' ).val(qqq[0][3]);
+            //jQuery( '#xlx_json' ).val(qqq[0][3]);
               
               //jQuery( '#xlx_json' ).val(Object.keys(slag[0]));
             //jQuery( '#xlx_json' ).val(Object.keys(slag[0])[3]);
-             // jQuery( '#xlx_json' ).val(slag[0][Object.keys(slag[0])[1]]);
+             jQuery( '#xlx_json' ).val(slag[0][Object.keys(slag[0])[1]]);
             //ok
               
-              //ExportData();
+              ExportData();
           })
         };
 
@@ -54,6 +54,7 @@
   }
 
   function ExportData() {  
+      alert(1);
         filename='reports.xlsx';
        data='[{Market: "IN", New Arrivals: "6", Upcoming Appointments: "2", Pending - 1st Attempt: "4"},' +
             '{Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"},' +
