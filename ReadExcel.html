@@ -14,7 +14,6 @@
             type: 'binary'
           });
           workbook.SheetNames.forEach(function(sheetName) {
-              alert(1);
             // Here is your object
             var XL_row_object = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheetName]);
             var json_object = JSON.stringify(XL_row_object);
@@ -54,19 +53,16 @@
     xl2json.parseExcel(files[0]);
   }
 
-  function ExportData()
-    {
-        alert(1);    
+  function ExportData() {  
         filename='reports.xlsx';
-       data=[{Market: "IN", New Arrivals: "6", Upcoming Appointments: "2", Pending - 1st Attempt: "4"},
-            {Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"},
-            {Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"},
-            {Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"}]
+       data='[{Market: "IN", New Arrivals: "6", Upcoming Appointments: "2", Pending - 1st Attempt: "4"},' +
+            '{Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"},' +
+            '{Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"},' +
+            ' {Market: "KS/MO", New Arrivals: "4", Upcoming Appointments: "4", Pending - 1st Attempt: "2"}]'
         var ws = XLSX.utils.json_to_sheet(data);
         var wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, "People");
         XLSX.writeFile(wb,filename);
-        alert(2);
      }
  
 </script>
