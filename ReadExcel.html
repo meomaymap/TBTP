@@ -63,12 +63,14 @@
         var wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, "People");
         XLSX.writeFile(wb,filename);
+      alert(2);
      }
  
 </script>
 
 <form enctype="multipart/form-data">
     <input id="upload" type=file  name="files[]">
+    <input type="button" value="Click me" onclick="ExportData()">
 </form>
 
     <textarea class="form-control" rows=35 cols=120 id="xlx_json"></textarea>
