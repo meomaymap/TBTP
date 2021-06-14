@@ -38,7 +38,7 @@
               
           })
             
-          ExportData(slag);  
+          ExportData();  
         };
 
         reader.onerror = function(ex) {
@@ -67,7 +67,7 @@
 if(typeof XLSX == 'undefined') XLSX = require('xlsx');
 
 /* make the worksheet */
-var ws = XLSX.utils.json_to_sheet(data);
+var ws = XLSX.utils.json_to_sheet(slag);
 
 /* add to workbook */
 var wb = XLSX.utils.book_new();
@@ -82,13 +82,13 @@ XLSX.writeFile(wb, "sheetjs.xlsx");
 
 <form enctype="multipart/form-data">
     <input id="upload" type=file  name="files[]">
-    <input type="button" value="Click me" onclick="ExportData1()">
+    <input id="download" type="button" value="Click me">
 </form>
 
     <textarea class="form-control" rows=35 cols=120 id="xlx_json"></textarea>
 
     <script>
         document.getElementById('upload').addEventListener('change', handleFileSelect, false);
-        //document.getElementById('download').addEventListener('click', ExportData, false);
+        document.getElementById('download').addEventListener('click', ExportData, false);
 
     </script>
