@@ -78,6 +78,7 @@ var hi = window.innerHeight;
 
         });
 
+/*
 var eventMethod = window.addEventListener
 			? "addEventListener"
 			: "attachEvent";
@@ -99,4 +100,4 @@ var eventMethod = window.addEventListener
 		//console.log(e);
 	});
 
-
+*/
