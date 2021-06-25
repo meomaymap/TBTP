@@ -20,10 +20,10 @@
 		
 		if (e.origin !== 'https://meomaymap.github.io') return;
 		
-		//if (e.data === "myevent" || e.message === "myevent") 
+		if (e.data === "myevent" || e.message === "myevent") 
 			//alert('Message from iframe just came!');
-		alert(e.data);
-			//alert(e.message);
+		//alert(e.data);
+			alert(e.message);
 		
 		//console.log(e);
 	});
