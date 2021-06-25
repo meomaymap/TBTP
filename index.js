@@ -75,7 +75,7 @@ var hi = window.innerHeight;
 	    
 	    document.getElementById("myFrame").src = "https://script.google.com/macros/s/AKfycby7xOajlwfyrlDp0vR-3mxXC5O95s5uPbh3cz8C/exec" + str;
 	    
-		alert(localStorage.getItem("QQQ"));
+		//alert(localStorage.getItem("QQQ"));
         });
 
 /*
@@ -103,8 +103,8 @@ var eventMethod = window.addEventListener
 */
 
 
-window.addEventListener("storage", myFunction);
+//window.addEventListener("storage", myFunction);
 
-function myFunction(event) {
-  alert(localStorage.getItem("QQQ"));
-}
+//function myFunction(event) {
+//  alert(localStorage.getItem("QQQ"));
+//}
