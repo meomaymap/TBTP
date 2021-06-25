@@ -78,7 +78,7 @@ var hi = window.innerHeight;
 		//alert(document.getElementById("myFrame").localStorage.getItem("QQQ"));
         });
 
-/*
+
 var eventMethod = window.addEventListener
 			? "addEventListener"
 			: "attachEvent";
@@ -91,16 +91,15 @@ var eventMethod = window.addEventListener
 		
 		//if (e.origin !== 'https://meomaymap.github.io') return;
 		
-		//if (e.data === "myevent" || e.message === "myevent") 
-			//alert('Message from iframe just came!');
-		alert(e.origin);
-		alert(e.data);
+		if (e.data === "myevent" || e.message === "myevent") 
+			alert('Message from iframe just came!');
+
 			//alert(e.message);
 		
 		//console.log(e);
 	});
 
-*/
+
 
 
 //window.addEventListener("storage", myFunction);
