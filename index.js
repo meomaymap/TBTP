@@ -105,7 +105,6 @@ var eventMethod = window.addEventListener
 
 window.addEventListener("storage", myFunction);
 
-myFunction();
 function myFunction(event) {
   alert(localStorage.getItem("QQQ"));
 }
