@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<!-- Script loaded as iframe widget with fallback -->
+<div class="appsWidgetWrapper">
+    <iframe class="appsWidget" src="https://script.google.com/macros/s/AKfycbyjxUvW0nBPiST5JCLMkNIFS-pvo8QDXv7GhHFjKVlL_9W3gi4/exec?embedIframe"></iframe>
+    <div class="loggedOut">
+        <div class="loggedOutContent">
+            <div class="loggedOutText">You need to "authorize" this widget.</div>
+            <button class="authButton">Log In / Authorize</button>
+        </div>
+    </div>
+</div>
+
+<!-- Define JSONP callback and authbutton redirect-->
+<script>
+    function authSuccess(email){
+        console.log(email);
+        // Hide auth prompt overlay
+        document.querySelector('.loggedOut').style.display = 'none';
+    }
+    document.querySelectorAll('.authButton').forEach(function(elem){
+        elem.addEventListener('click',function(evt){
+            var currentUrl = document.location.href;
+            var authPage = 'https://script.google.com/macros/s/AKfycbyjxUvW0nBPiST5JCLMkNIFS-pvo8QDXv7GhHFjKVlL_9W3gi4/exec?auth=true&redirect=' + encodeURIComponent(currentUrl);
+            window.open('authPage','_blank');
+        });
+    });
+</script>
+
+<!-- Fetch script as JSONP with callback -->
+<script src="https://script.google.com/macros/s/AKfycbyjxUvW0nBPiST5JCLMkNIFS-pvo8QDXv7GhHFjKVlL_9W3gi4/exec?jsonpCallback=authSuccess"></script>
+
+</body>
+</html>
