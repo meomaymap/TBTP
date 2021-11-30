@@ -41,6 +41,8 @@
 
   <script>
     // Receive-loop
+      
+
     async function receiveLoop(btn) {
       your_id.disabled = peer_id.disabled = btn.disabled = true;
       while(true) {
@@ -59,6 +61,9 @@
           // Add peer's message
           
           talks.appendChild(talk);
+            
+          sendMessage('' + str);  
+            
         } catch(err) {
           console.error(err);
         }
@@ -83,6 +88,9 @@
       message.value = '';
     }
 
+      
+      
+      
     // addEventListener support for IE8
         function bindEvent(element, eventName, eventHandler) {
             if (element.addEventListener) {
@@ -98,6 +106,8 @@
             window.parent.postMessage(msg, '*');
         };
 
+      
+      
         var results = document.getElementById('results'),
             messageButton = document.getElementById('message_button');
 
