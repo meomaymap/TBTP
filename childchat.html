@@ -57,10 +57,9 @@
           str = CryptoJS.AES.decrypt(str, "22041976");
           str = str.toString(CryptoJS.enc.Utf8)
 
-          talk.innerText = str;
+          //talk.innerText = str;
           // Add peer's message
-          
-          talks.appendChild(talk);
+          //talks.appendChild(talk);
             
           sendMessage('' + str);  
             
@@ -79,13 +78,16 @@
         body: str
         //body: message.value
       });
-      // Create talk element
+      /*
+        // Create talk element
       const talk = document.createElement('div');
       talk.innerText = message.value;
       talk.classList.add('me');
       talks.appendChild(talk);
       // Empty your message
+      */
       message.value = '';
+      
     }
 
       
