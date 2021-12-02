@@ -118,7 +118,7 @@
 
         // Listen to messages from parent window
         bindEvent(window, 'message', function (e) {
-            //results.innerHTML = e.data;
+            results.innerHTML = e.data;
             
             message.value = e.data;
             send();
