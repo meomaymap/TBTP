@@ -30,9 +30,11 @@
   </p>
 
   <hr>
+        <!--
   <div id='talks'>
-    <!--This will be added by JavaScript -->
+    
   </div>
+-->
   
 <h1>Hello there, i'm an iframe</h1>
     <p>Send Message: <button id="message_button">Hi parent</button></p>
@@ -81,10 +83,10 @@
       });
       /*
         // Create talk element
-      const talk = document.createElement('div');
-      talk.innerText = message.value;
-      talk.classList.add('me');
-      talks.appendChild(talk);
+      //const talk = document.createElement('div');
+      //talk.innerText = message.value;
+      //talk.classList.add('me');
+      //talks.appendChild(talk);
       // Empty your message
       */
       message.value = '';
@@ -111,12 +113,12 @@
 
       
       
-        var results = document.getElementById('results'),
-            messageButton = document.getElementById('message_button');
+        //var results = document.getElementById('results');
+          var messageButton = document.getElementById('message_button');
 
         // Listen to messages from parent window
         bindEvent(window, 'message', function (e) {
-            results.innerHTML = e.data;
+            //results.innerHTML = e.data;
             
             message.value = e.data;
             send();
