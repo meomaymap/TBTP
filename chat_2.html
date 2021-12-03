@@ -33,7 +33,7 @@
   <script>
     // Receive-loop
     
-  /*    
+      
     var chophep=true;
       var daketnoi=false;
       var begin;
@@ -44,16 +44,18 @@
          var p = document.getElementById("peer_id").value;
         if (daketnoi==false && y!="" && p!="") {
             begin = Date.now();
-            receiveLoop();
+            receiveLoop1();
             //receive();
         }
     }, 10000);
-  */    
+      
 
+ /*
  setInterval(function(){ 
         myDisplay();
 }, 10000);
 
+      
 async function myDisplay() {
   let myPromise = new Promise(function(resolve) {
     setTimeout(function() {
@@ -73,7 +75,7 @@ async function myDisplay() {
         receiveLoop();
 }, 10000);
 */
-      
+    
 var str="";
 async function receiveLoop() {
     let myPromise = new Promise(function(resolve) {
@@ -85,8 +87,8 @@ async function receiveLoop() {
                 your_id.disabled = peer_id.disabled = true;
                 document.getElementById("btn").disabled = true;
                 str = Date.now();
-                /*
-                //while(true) {
+                
+                while(chophep=true) {
                     try {
                         // Get peer's response
                         const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
@@ -107,8 +109,8 @@ async function receiveLoop() {
                         console.error(err);
                     }
         
-                //}
-                */
+                }
+                
             }
       
         }    
