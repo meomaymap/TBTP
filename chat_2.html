@@ -16,7 +16,7 @@
        <p>
     <input placeholder="Your ID" id='your_id'>
     <input placeholder="Peer ID" id='peer_id'>
-    <button onclick='receiveLoop(this)'>Connect</button>
+    <button id="btn" onclick='receiveLoop(this)'>Connect</button>
     <br>
     <input placeholder="Message" id='message' size='50'>
     <button onclick="send()">Send</button>
@@ -31,9 +31,21 @@
   </div>
   <script>
     // Receive-loop
+    
+      
     var chophep=true;
+      var daketnoi=false;
+      
+    setInterval(function(){ 
+        chophep=true; 
+        if (daketnoi==false) {
+            receiveLoop(btn);
+        }
+    }, 10000);
+      
     async function receiveLoop(btn) {
-      your_id.disabled = peer_id.disabled = btn.disabled = true;
+      your_id.disabled = peer_id.disabled = true;
+      document.getElementById("btn").disabled = true;
       while(chophep == true) {
         try {
           // Get peer's response
@@ -47,9 +59,12 @@
           str = str.toString(CryptoJS.enc.Utf8)
 
           talk.innerText = str;
+            
+          daketnoi==true;
           // Add peer's message
           if (str!="") {
             chophep = false;
+            daketnoi==false;
           }
           
           talks.appendChild(talk);
@@ -59,7 +74,8 @@
       }
       
       if (chophep==false) {
-        your_id.disabled = peer_id.disabled = btn.disabled = false;
+        your_id.disabled = peer_id.disabled = false;
+          document.getElementById("btn").disabled = false;
       }
     }
 
