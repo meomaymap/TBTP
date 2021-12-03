@@ -3,7 +3,7 @@
 <body>
 
 
-<iframe src="https://meomaymap.github.io/TBTP/Q_local_2.html" height="400" width="500" title="Iframe Example"></iframe>
+<iframe id="the_iframe" src="https://meomaymap.github.io/TBTP/Q_local_2.html" height="400" width="500" title="Iframe Example"></iframe>
 
 <button onclick="changeValue()">Change a Storage Item</button>
 
@@ -13,11 +13,14 @@
 window.addEventListener("storage", myFunction);
 
 function myFunction(event) {
-  document.getElementById("demo").innerHTML = "A change was made in the storage area";
+  //document.getElementById("demo").innerHTML = "A change was made in the storage area";
+  document.getElementById("demo").src = localStorage.getItem("mytime");
+  localStorage.removeItem("mytime");
+
 }
 
 function changeValue() {
-  localStorage.setItem("mytime", Date.now());
+  localStorage.setItem("mytime", "https://www.24h.com.vn");
 }
 </script>
 </body>
