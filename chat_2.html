@@ -75,9 +75,9 @@
             
           daketnoi==true;
           // Add peer's message
-          if (str!="" || Date.now() - begin > 2000) {
+          if (str!="" || (Date.now() - begin) > 2000) {
             chophep = false;
-            daketnoi==false;
+            daketnoi = false;
           }
           
           talks.appendChild(talk);
