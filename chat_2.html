@@ -69,7 +69,7 @@
                     var signal = aController.signal;
                     const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`,{signal});
                     //const data = await response.json();
-                    //aController.abort();
+                    aController.abort();
                     
                     
                     // Get peer's response
