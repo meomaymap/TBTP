@@ -76,7 +76,11 @@
           daketnoi==true;
           var  thoigian = Date.now() - begin;
           // Add peer's message
-          if (str!="" || thoigian > 2000) {
+          if (str!="") {
+            chophep = false;
+            daketnoi = false;
+          } 
+            if (thoigian > 2000) {
             chophep = false;
             daketnoi = false;
           }
