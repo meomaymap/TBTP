@@ -53,16 +53,18 @@
    setInterval(function(){ 
         receiveLoop();
 }, 10000);
-
+      
+var str="";
 async function receiveLoop() {
     let myPromise = new Promise(function(resolve) {
         setTimeout(function() {
             var y = document.getElementById("your_id").value;
             var p = document.getElementById("peer_id").value;
-            var str="";
+            
             if (y!="" && p!="") {
                 your_id.disabled = peer_id.disabled = true;
                 document.getElementById("btn").disabled = true;
+                /*
                 while(true) {
                     try {
                         // Get peer's response
@@ -84,7 +86,8 @@ async function receiveLoop() {
                         console.error(err);
                     }
         
-                } 
+                }
+                */
             }
       
         }    
@@ -98,6 +101,8 @@ async function receiveLoop() {
         //daketnoi = false;
          your_id.disabled = peer_id.disabled = false;
         document.getElementById("btn").disabled = false;
+      alert(str);
+      str = "";
 }
       
       
