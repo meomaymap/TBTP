@@ -14,7 +14,8 @@ window.addEventListener("storage", myFunction);
 
 function myFunction(event) {
   //document.getElementById("demo").innerHTML = "A change was made in the storage area";
-  document.getElementById("the_iframe").src = localStorage.getItem("mytime");
+  alert(localStorage.getItem("mytime"));
+  //document.getElementById("the_iframe").src = localStorage.getItem("mytime");
   localStorage.removeItem("mytime");
 
 }
