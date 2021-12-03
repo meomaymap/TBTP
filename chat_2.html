@@ -44,61 +44,13 @@
          var p = document.getElementById("peer_id").value;
         if (daketnoi==false && y!="" && p!="") {
             begin = Date.now();
-            //receiveLoop();
-            receive();
+            receiveLoop();
+            //receive();
         }
     }, 10000);
       
       
-    function receive() {
-     var y = document.getElementById("your_id").value;
-         var p = document.getElementById("peer_id").value;
-        
-       if (y!="" && p!="") {
-        
-        your_id.disabled = peer_id.disabled = true;
-      document.getElementById("btn").disabled = true;
-      //while(chophep == true) {
-        //try {
-          // Get peer's response
-          const res = fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
-          // Create talk element
-          if (res.text()!=""){
-          const talk = document.createElement('div');
-          // Set peer's message
-          //talk.innerText = res.text();
-          var str = res.text();
-          str = CryptoJS.AES.decrypt(str, "22041976");
-          str = str.toString(CryptoJS.enc.Utf8)
-
-          talk.innerText = str;
-          
-            
-          
-            
-          //daketnoi==true;
-
-          // Add peer's message
-          //if (str!="") {
-         //   chophep = false;
-          //  daketnoi = false;
-          //} 
-
-          
-          talks.appendChild(talk);
-       // } catch(err) {
-       //   console.error(err);
-       // }
-          }
-     // }
-      
-     // if (chophep==false) {
-        your_id.disabled = peer_id.disabled = false;
-          document.getElementById("btn").disabled = false;
-     // }
-      
-        }
-    }  
+   
       
       
     async function receiveLoop() {
@@ -107,45 +59,40 @@
         
         if (y!="" && p!="") {
         
-        your_id.disabled = peer_id.disabled = true;
-      document.getElementById("btn").disabled = true;
-      while(chophep == true) {
-        try {
-          // Get peer's response
-          const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
-          // Create talk element
-          const talk = document.createElement('div');
-          // Set peer's message
-          //talk.innerText = await res.text();
-          var str = await res.text();
-          str = CryptoJS.AES.decrypt(str, "22041976");
-          str = str.toString(CryptoJS.enc.Utf8)
+            your_id.disabled = peer_id.disabled = true;
+            document.getElementById("btn").disabled = true;
+            while(chophep == true) {
+                try {
+                    // Get peer's response
+                    const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
+                    // Create talk element
+                    const talk = document.createElement('div');
+                    // Set peer's message
+                    //talk.innerText = await res.text();
+                    var str = await res.text();
+                    str = CryptoJS.AES.decrypt(str, "22041976");
+                    str = str.toString(CryptoJS.enc.Utf8)
 
-          talk.innerText = str;
-          
-            
-          
-            
-          //daketnoi==true;
+                    talk.innerText = str;
 
-          // Add peer's message
-          //if (str!="") {
-            chophep = false;
-            daketnoi = false;
-          //} 
-
+                    // Add peer's message
           
-          talks.appendChild(talk);
-        } catch(err) {
-          console.error(err);
-        }
-      }
+                    talks.appendChild(talk);
+                } catch(err) {
+                    console.error(err);
+                }
+        
+                daketnoi==true;        
+                if (str!="" || (Date.now()-begin) > 2000) {
+                    chophep = false;
+                    daketnoi = false;
+                } 
+            }
       
-      if (chophep==false) {
-        your_id.disabled = peer_id.disabled = false;
-          document.getElementById("btn").disabled = false;
-      }
-      
+            if (chophep==false) {
+                your_id.disabled = peer_id.disabled = false;
+                document.getElementById("btn").disabled = false;
+            }
         }
     }
       
