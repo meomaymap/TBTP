@@ -48,6 +48,9 @@
 
           talk.innerText = str;
           // Add peer's message
+          if (message.value!="") {
+            chophep = false;
+          }
           
           talks.appendChild(talk);
         } catch(err) {
@@ -71,9 +74,7 @@
       });
       // Create talk element
       const talk = document.createElement('div');
-      if (message.value!="") {
-         chophep = false;
-      }
+      
       talk.innerText = message.value;
       talk.classList.add('me');
       talks.appendChild(talk);
