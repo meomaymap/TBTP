@@ -60,7 +60,7 @@
             document.getElementById("btn").disabled = true;
             while(chophep == true) {
                 daketnoi=true; 
-                alert(Date.now()-begin);
+                if (Date.now()-begin>0) {
                 try {
                     
                     
@@ -83,7 +83,7 @@
                 } catch(err) {
                     console.error(err);
                 }
-        
+                }
                        
                 if (str!="") {
                     chophep = false;
