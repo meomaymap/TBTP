@@ -44,10 +44,36 @@
          var p = document.getElementById("peer_id").value;
         if (daketnoi==false && y!="" && p!="") {
             begin = Date.now();
-            receiveLoop();
-            //receive();
+            //receiveLoop();
+            doSomethingInSeries();
         }
     }, 10000);
+      
+    async function _doSomethingInSeries() {
+    const res1 = await callApi();
+    const res2 = await persistInDB(res1);
+    const res3 = await doHeavyComputation(res1);
+    return 'simle';
+}
+
+async function doSomethingInSeries(): Promise<any> {
+  let timeoutId;
+
+  const delay = new Promise(function(resolve, reject){
+    timeoutId = setTimeout(function(){
+      reject(new Error('timeout'));
+    }, 3000);
+  });
+
+  // overall timeout
+  //return Promise.race([delay, _doSomethingInSeries()])
+  return Promise.race([delay, receiveLoop()])
+    .then( (res) => {
+      clearTimeout(timeoutId);
+      return res;
+    });
+
+}  
       
 
     async function receiveLoop() {
