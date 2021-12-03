@@ -49,10 +49,30 @@
         }
     }, 10000);
   */    
+
+ setInterval(function(){ 
+        myDisplay();
+}, 10000);
+
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve) {
+    setTimeout(function() {
+        var y = document.getElementById("your_id").value;
+         var p = document.getElementById("peer_id").value;
+        
+        if (y!="" && p!="") {
+            resolve("I love You !!" + Date.now());
+        }
+    }, 2000);
+  });
+  alert(await myPromise);
+}     
       
+/*      
    setInterval(function(){ 
         receiveLoop();
 }, 10000);
+*/
       
 var str="";
 async function receiveLoop() {
