@@ -73,17 +73,14 @@
             
           
             
-          daketnoi==true;
-          var  thoigian = Date.now() - begin;
+          //daketnoi==true;
+
           // Add peer's message
-          if (str!="") {
+          //if (str!="") {
             chophep = false;
             daketnoi = false;
-          } 
-            if (thoigian > 2000) {
-            chophep = false;
-            daketnoi = false;
-          }
+          //} 
+
           
           talks.appendChild(talk);
         } catch(err) {
@@ -98,6 +95,8 @@
       
         }
     }
+      
+
 
     // Send your message
     function send() {
