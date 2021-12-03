@@ -2,7 +2,7 @@
 <html>
 <body>
 
-
+<input type="text" id="fname" name="fname">
 <button onclick="changeValue()">Change a Storage Item</button>
 
 <p id="demo"></p>
@@ -15,7 +15,7 @@
 //}
 
 function changeValue() {
-  localStorage.setItem("mytime", Date.now()+"|"+"https://www.24h.com.vn");
+  localStorage.setItem("mytime", Date.now()+"|"+document.getElementById("fname").value);
 }
 </script>
 </body>
