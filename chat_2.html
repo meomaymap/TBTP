@@ -60,12 +60,10 @@
             document.getElementById("btn").disabled = true;
             while(chophep == true) {
                 daketnoi=true; 
+                alert(Date.now()-begin);
                 try {
                     
-                    if (Date.now()-begin>2000) {
-                        chophep = false;
-                    daketnoi = false;
-                    }
+                    
                     
                     // Get peer's response
                     const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
@@ -90,7 +88,7 @@
                 if (str!="") {
                     chophep = false;
                     daketnoi = false;
-                } 
+                }
             }
       
             if (chophep==false) {
