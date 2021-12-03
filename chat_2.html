@@ -59,8 +59,14 @@
             your_id.disabled = peer_id.disabled = true;
             document.getElementById("btn").disabled = true;
             while(chophep == true) {
+                daketnoi=true; 
                 try {
-                    alert(1);
+                    
+                    if (Date.now()-begin>2000) {
+                        chophep = false;
+                    daketnoi = false;
+                    }
+                    
                     // Get peer's response
                     const res = await fetch(`https://ppng.io/${peer_id.value}-${your_id.value}`);
                     // Create talk element
@@ -80,7 +86,7 @@
                     console.error(err);
                 }
         
-                daketnoi=true;        
+                       
                 if (str!="") {
                     chophep = false;
                     daketnoi = false;
