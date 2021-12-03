@@ -38,7 +38,9 @@
       
     setInterval(function(){ 
         chophep=true; 
-        if (daketnoi==false) {
+        var y = document.getElementById("your_id").value;
+         var p = document.getElementById("peer_id").value;
+        if (daketnoi==false && y!="" && p!="") {
             receiveLoop(btn);
         }
     }, 10000);
